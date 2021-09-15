@@ -1,13 +1,16 @@
 let string = "friends, romans, countrymen, lend me your ears.";
 let words = string.split(" ");
+let sortedWords;
 let sentence = "";
 
+ sortedWords = words.sort(function(a , b) {return a.length - b.length});
 
-for (let i = 0; i < words.length; i++) {
-    sentence += words[i].substring(0,1).toUpperCase() + words[i].substring(1).toLowerCase() + " (" + words[i].length + ") ";
+for (let i = 0; i < sortedWords.length; i++) {
+    sentence += sortedWords[i].substring(0,1).toUpperCase() + sortedWords[i].substring(1).toLowerCase() + " (" + sortedWords[i].length + ") ";
 }
 
 console.log(sentence);
+
 
 /*
 Level 4
